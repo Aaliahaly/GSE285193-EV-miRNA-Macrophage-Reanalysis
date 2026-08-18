@@ -1,49 +1,126 @@
-# History files
+# ============================================================
+# Project-specific exclusions
+# GSE285193 EV-miRNA Macrophage Reanalysis
+# ============================================================
+
+# macOS
+.DS_Store
+._*
+
+# ------------------------------------------------------------
+# Nextflow
+# ------------------------------------------------------------
+.nextflow/
+.nextflow.*
+.nextflow.log*
+work/
+work-*/
+
+# Nextflow temporary files
+*.command.begin
+*.command.err
+*.command.log
+*.command.out
+*.command.run
+*.command.sh
+*.command.trace
+*.exitcode
+
+# ------------------------------------------------------------
+# nf-core pipeline output
+# ------------------------------------------------------------
+# Large pipeline-generated output directories
+results/human_EV_smrnaseq/
+results/mouse_BMDM_rnaseq/
+
+# ------------------------------------------------------------
+# Raw sequencing data
+# ------------------------------------------------------------
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Sequence archives
+*.sra
+
+# ------------------------------------------------------------
+# Alignment files
+# ------------------------------------------------------------
+*.bam
+*.bai
+*.sam
+*.cram
+*.crai
+
+# ------------------------------------------------------------
+# Large reference genome / annotation files
+# ------------------------------------------------------------
+*.fa
+*.fasta
+*.fna
+*.fa.gz
+*.fasta.gz
+*.fna.gz
+*.gtf.gz
+*.gff.gz
+*.gff3.gz
+
+# Genome indices
+*.bt2
+*.bt2l
+*.bwt
+*.pac
+*.ann
+*.amb
+*.sa
+
+# ------------------------------------------------------------
+# Singularity / Apptainer containers
+# ------------------------------------------------------------
+*.sif
+*.img
+
+# ------------------------------------------------------------
+# Compressed archives
+# ------------------------------------------------------------
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+
+# ------------------------------------------------------------
+# Temporary files
+# ------------------------------------------------------------
+tmp/
+temp/
+scratch/
+cache/
+
+# ------------------------------------------------------------
+# R session files
+# ------------------------------------------------------------
 .Rhistory
-.Rapp.history
-
-# Session Data files
 .RData
-.RDataTmp
-
-# User-specific files
 .Ruserdata
-
-# Example code in package build process
-*-Ex.R
-
-# Output files from R CMD build
-/*.tar.gz
-
-# Output files from R CMD check
-/*.Rcheck/
-
-# RStudio files
 .Rproj.user/
 
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
+# ------------------------------------------------------------
+# Python cache
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
 
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
-.httr-oauth
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+*.log
+logs/
 
-# knitr and R markdown default cache directories
-*_cache/
-/cache/
-
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
-
-# R Environment Variables
-.Renviron
-
-# pkgdown site
-docs/
-
-# translation temp files
-po/*~
-
-# RStudio Connect folder
-rsconnect/
+# ------------------------------------------------------------
+# Editor files
+# ------------------------------------------------------------
+.vscode/
+.idea/
+*~
